@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="curso-style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso CSS - JR.COM</title>
+</head>
+
+<body>
+    <div class="corpo">
+        <h1>Curso CSS - JR.COM</h1>
+        <h2>O que é CSS?</h2>
+        <p>CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem de marcação como HTML. O CSS separa o conteúdo da representação visual do site.<br>A relação entre HTML e CSS é bem forte. Como o HTML é uma linguagem de marcação (o alicerce de um site) e o CSS é focado no estilo (toda a estética de um site), eles andam juntos.<br>CSS não é tecnicamente uma necessidade, mas provavelmente você não gostaria de olhar para um site que usa apenas HTML, pois isso pareceria completamente abandonado.</p>
+        <h2>Como funciona?</h2>
+        <p>O CSS é <i>linkado</i> à página HTML por meio de uma tag na <i>head</i> do documento. Após criar o arquivo que deve ter a extensão <i>.css</i>, o importamos da seguinte maneira:<br> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;NOME_DO_ARQUIVO.css&quot;&gt;</code><br>Feito isso, podemos começar a implementar as regras de formatação, como são chamadas. Vale lembrar que diferentemente do HTML que conta com uma estruturação mais rígida, aqui não precisamos de nada, é só escrever. Abaixo, temos um exemplo de uma regra básica que alter a cor de todas as <i>'Headers 1'</i> para vermelho</p><br>
+        <code style="font-size: 40px;">h1{<br>
+            color: red;<br>
+            }<br></code>
+        <h2>Regras?</h2>
+        <p>Todo elemento formatado do HTML pelo CSS passa por uma regra no arquivo <i>.css</i>.<br>É lá que definimos as propriedades que queremos que este elemento tome. Há alguns meios de definir os elementos que queremos.</p>
+        <h3>Tipo</h3>
+        <p>Podemos formatar um elemento pelo seu tipo. Ao fazer isso, todos os elementos do mesmo tipo na página serão formatados. Para isso, o CSS usa os mesmos tipos dos<br> arquivos HTML, logo, se quisermos formatar todos os <b>P</b>áragrafos, a nossa regra será usando o 'p'. Exemplo:</p>
+        <code>p{<br>
+            font-size: 20px;<br>
+            }<br></code>
+        <h3>Classe</h3>
+        <p>Outro jeito de formatar vários elementos é com classes. Ao criar um elemento em HTML, há um atributo que podemos colocar na tag de abertura chamado <i>class</i>. Ao definirmos uma classe para aquele componente, ele se torna parte daquele grupo específico e então podemos adicionar quantos outros quisermos e eles farão parte deste grupo.
+            <br>Classe no documento HTML:</p><code>&lt;h1 class=&quot;exemplo&quot;&gt;Um exemplo&lt;/h1&gt;</code>
+        <p>Ao fazer uma regra para a classe acima, temos a seguinte formatação:</p><code>.exemplo{<br>
+            text-align:center;<br>
+            }<br></code>
+        <h3>ID</h3>
+        <p>Por ultimo, temos a <b>Id</b>entidade, ou 'ID', diferentemente da classe ou do tipo de elemento, a Id é única e remete apenas a um único componente na página. Ela é uma propriedade da tag de abertura, e é escrita da seguinte maneira:</p><code>&lt;p id=&quot;idexemplo&quot;&gt;Um parágrafo&lt;/p&gt;</code>
+        <p>Ao fazer uma regra para a classe acima, temos a seguinte formatação:</p><code>#idexemplo{<br>
+            color:blue;<br>
+            }<br></code>
+        <h2>Medidas</h2>
+        <p>Em CSS temos várias unidades de medida, cada uma é usada em um caso específico e pode implicar em mudanças na visualização do site de um dispositivo para outro. As unidades mais conhecidas são <b>px, %, em e rem</b> </p>
+        <h3>px (pixels)</h3>
+        <p>Pixels são uma unidade absoluta, não mudam de acordo com a tela exibida, isso quer dizer que algo definido por pixels sempre terá aquele comprimento independentemente da tela em que o usuário está visualizando o elemento.</p>
+        <h3>% (relativa)</h3>
+        <p>A porcentagem é autoexplicativa, o elemento que tiver o tamanho definido por porcentagem terá o tamanho de acordo com a tela visualizada, é uma unidade que se adapta a tela.</p>
+        <h3>em (relativa a fonte do elemento)</h3>
+        <p>Mais usada para layouts responsivos, a rem se adapta a tela assim como a porcentagem, no entanto ela é muito mutável e pode errar de acordo com a tela.</p>
+        <h3>rem (relativa a fonte do elemento raiz)</h3>
+        <p>Segue a lógica do em, porém sempre terá a medida do corpo da página como base.</p>
+        <hr>
+        <h2>Posição</h2>
+        <code>position: xxxxxx;</code>
+        <p>A posição especifica onde e de qual maneira um elemento será mostrado na página. Atualmente existem 5 tipos diferentes de se posicionar algo: <b>static, relative, fixed, absolute e sticky</b>.</p>
+        <h3>static</h3>
+        <p>É a posição padrão de elementos no HTML, elementos assim não são afetados por outras regras de posicionamento, sendo literalmente estáticos na página.</p>
+        <h3>relative</h3>
+        <p>Componentes com essa propriedade são afetados por outras regras de posicionamento, podendo ser movidos de acordo com outras propriedades pela página.</p>
+        <h3>fixed</h3>
+        <p>Quando essa propriedade é colocada em um elemento, ele ficará naquela posição permanentemente, mesmo que a página seja <i>scrollada</i> ou movida para os lados.</p>
+        <h3>absolute</h3>
+        <p>Similar a propriedade <i>fixed</i>, elementos com a posição <i>absolute</i> ficam permanentemente posicionados em relação ao elemento pai em que estão inseridos.</p>
+        <h3>sticky</h3>
+        <p>Elementos <i>sticky</i> flutuam entre <i>absolute</i> e <i>fixed</i>, eles permanecerão na posição até que a página seja <i>scrollada</i> e a partir do momento em que ficariam para trás, eles ficarão "presos" no limite da visualização da página.</p>
+        <hr>
+        <h2>Espaçamentos e Index</h2>
+        <p>Estas propriedades definem a posição de um elemento na página e seu espaçamento em relação a outros elementos.</p>
+        <img src="marginpaddingbasic.png">
+        <h3>Margin</h3>
+        <p>É a camada mais externa, está fora da borda do elemento.</p>
+        <h3>Border</h3>
+        <p>É uma camada que pode receber atributos visuais como borda sólida ou em pontos, não é usada para posicionar</p>
+        <h3>Padding</h3>
+        <p>Camada interna a borda.</p>
+        <h3>Z-Index</h3>
+        <p>Esta propriedade define a sobreposição de elementos, quanto maior o index mais para frente o elemento estará e vice-versa.</p>
+        <code>z-index: x;</code>
+        <hr>
+        <h2>Cores e backgrounds e fontes</h2>
+        <h3>Cores</h3>
+        <p>Podem ser definidas de diversas maneiras e atribuidas a elementos textuais e visuais, aqui abordaremos 3:</p>
+        <h4>RGBA</h4>
+        <p>Como descrito no nome, rgba funciona com 4 parâmetros definindo a cor e a transparência: red, green, blue e alpha. Existe a variação RGB que define apenas cores sólidas e pode ser usada caso não haja a necessidade de transparência.</p>
+        <h4>Hexadecimal</h4>
+        <p>É usada para cores sólidas, segue o mesmo padrão do rgb porém em um bloco de texto no formato #xxxxxx.</p>
+        <h4>Nomes</h4>
+        <p>O CSS tabém conta com nomes predefinidos de cores, varia das mais simples como black, blue e green até outras cores compostas como SlateBlue, Tomato e MediumSeaGreen</p>
+        <h3>Backgrounds</h3>
+        <h3>Fontes</h3>
+        
+    </div>
+</body>
+
+</html>

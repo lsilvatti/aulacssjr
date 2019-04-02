@@ -1,0 +1,24 @@
+p, a, h1, h2, h3, h4{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1{
+    font-size: 40px;
+}
+
+code {
+    font-size: 115%;
+    background-color: #eaeaea;
+    font-family: 'Inconsolata', monospace;
+    color: #e83e8c;
+    word-break: break-word;
+}
+
+h1{
+    text-align: center;
+}
+
+.corpo{
+    margin: 0px 40px 0px 40px;
+}
