@@ -1,0 +1,23 @@
+h1, h2, p, li, a{
+    font-family: 'Roboto', sans-serif;
+}
+
+#titulo{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.listas{
+    color: red; 
+}
+
+#foto{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-color: azure;
+}
